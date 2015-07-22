@@ -47,3 +47,19 @@ a {
 ul {
 	list-style-type: none;
 }
+
+.fotorama__nav {
+	&--dots{
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.fotorama__dot {
+	width: 10px;
+	height: 10px;
+	background-color: #FFF;
+}
+
+
+

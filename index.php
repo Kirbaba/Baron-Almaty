@@ -51,7 +51,21 @@
 		</header>
 
 		<div class="content">
-			
+			<div class="home">
+				
+					<div class="fotorama" data-arrows="false" data-height="845/465" data-autoplay="true" data-loop="true">					
+						
+							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+						
+							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+						
+							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+						
+							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+						
+				</div>
+				
+			</div>
 		</div>
 
 		<footer class="footer">
