@@ -16,18 +16,42 @@
 
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__topline">
-				
+			<div class="header__topline">			
 			</div>
 			<div class="contain">
-				<div class="header__logo">
-					
+				<div class="header__content">
+					<div class="header__content__logo">
+						<a href="#nowhere">
+							<img src="<?php bloginfo('template_directory'); ?>/img/LOGO_Vse-1.png" alt="placeholder+image">
+						</a>
+					</div>
+					<div class="header__content__menuline">
+						<div class="header__content__menuline__phone">
+							<h3>+7 |7171| <span>789-89-87</span></h3>
+							<p>Работаем с 9:00 до 18:00</p>
+						</div>
+						<div class="header__content__menuline__offline">
+							<a href="#nowhere"><span>Offline консультант</span></a>
+						</div>
+						<div class="header__content__menuline__mailus">
+							<a href="#nowhere"><span><i></i>Написать нам</span></a>
+						</div>						
+					</div>
+					<nav class="navMenu">							
+							<ul>
+								<li><a href="#nowhere">О компании</a></li>
+								<li><a href="#nowhere">Покупателям</a></li>
+								<li><a href="#nowhere">Рецепты</a></li>
+								<li><a href="#nowhere">Партнерам</a></li>
+								<li><a href="#nowhere">Контакты</a></li>
+							</ul>
+						</nav>	
 				</div>
 			</div>
 		</header>
 
 		<div class="content">
-			hello world
+			
 		</div>
 
 		<footer class="footer">

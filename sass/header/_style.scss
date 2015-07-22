@@ -1,12 +1,2 @@
-.header {
-	display: block;
-	height: 200px;
-	background-color: #23455b;
-	&__topline {
-		display: block;
-		width: 50%;
-		float: right;
-		height: 90px;
-		background-color: #258bd9;
-	}
-}
+@import "_head";
+@import "_navigation"
