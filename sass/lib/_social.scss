@@ -1,0 +1,37 @@
+.soc {
+  a {
+    i {
+      display: block;
+      float: left;
+      height: 29px;
+      width: 31px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: 10px;
+    }
+  }
+  &__vk {
+    background-image: url("../img/vkontakte.png");
+  }
+  &__fb {
+    background-image: url("../img/facebook.png");
+  }
+  &__tw {
+    background-image: url("../img/twitter.png");
+  }
+  &__in {
+    background-image: url("../img/linkedin.png");
+  }
+  &__gp {
+    background-image: url("../img/google.png");
+  }
+  &__ig {
+    background-image: url("../img/instagram.png");
+  }
+  &__ok {
+    background-image: url("../img/odnoklassniki.png");
+  }
+  &__yt {
+    background-image: url("../img/youtube.png");
+  }
+}
