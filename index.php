@@ -62,6 +62,7 @@
 						<h2>“Рецепты”</h2>
 						<a href="#nowhere"><span>Перейти в раздел <i></i></span> </a>
 					</div>
+					<div class="home__baner__tomato"></div>
 			 	</div>			 	
 			</div>
 			<div class="botmenu">
@@ -69,13 +70,13 @@
 			 		<div class="contain">
 			 			<div class="botmenu__content">
 			 				<div class="botmenu__content__bird">
-			 					<a href="#nowhere"><span>Птица</span></a>
+			 					<a href="#nowhere"><i></i><span>Птица</span></a>
 			 				</div>
 			 				<div class="botmenu__content__soup">
-			 					<a href="#nowhere"><span>Суповые наборы</span></a>
+			 					<a href="#nowhere"><i></i><span>Суповые наборы</span></a>
 			 				</div>
 			 				<div class="botmenu__content__meat">
-			 					<a href="#nowhere"><span>Мясо</span></a>
+			 					<a href="#nowhere"><i></i><span>Мясо</span></a>
 			 				</div>
 			 			</div>
 			 		</div>
