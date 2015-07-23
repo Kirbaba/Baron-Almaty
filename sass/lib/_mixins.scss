@@ -19,7 +19,7 @@
 	        transition: all $t linear;
 }	
 
-@mixin background-size($size) {
+@mixin bgs($size) {
 	-webkit-background-size: $size;
 	     -o-background-size: $size;
 	        background-size: $size;
