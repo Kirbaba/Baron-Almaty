@@ -54,9 +54,87 @@ $homeHeight: 443px;
 					height: 10px;
 					width: 24px;
 					}
-				}
-				
-			}
+				}				
+			}			
 		}
 	}	
+}
+$botmH: 182px;
+.botmenu{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: $botmH;
+	background-color: #268BDA;
+	&__rbg{
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		float: right;
+		height: $botmH;
+		background-color: #0c60a2;	
+		z-index: 0;
+	}
+	&__content{
+		z-index: 99;
+		position: relative;
+		&__bird{
+			width: 1 / 3 * 100%;
+			display: block;
+			float: left;
+			background-color: #268BDA;
+			background-image: url(../img/bird.png);
+			background-repeat: no-repeat;			
+			background-position: 10% 50%;
+			a {
+				display: block;
+				line-height: $botmH;				
+				color: #FFF;
+				font-size: 18px;
+				text-transform: uppercase;
+				height: $botmH;
+				width: 100%;
+				padding: 0 10%;
+				text-align: center;
+				span {
+					line-height: normal;
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0px 100px;
+					text-align: left;
+				}
+				&:hover {
+					background-color: darken(#268BDA, 10%);
+					background-image: url(../img/bird.png);
+					background-repeat: no-repeat;
+					background-position: 10% 50%;
+				}
+			}
+		}
+		&__soup{
+			@extend .botmenu__content__bird;
+			background-color: #1573bc;
+			background-image: url(../img/soup.png);
+			a{
+				&:hover {
+					background-color: darken(#1573bc, 10%);
+					background-image: url(../img/soup.png);
+				}
+			}
+		}
+		&__meat{
+			@extend .botmenu__content__bird;
+			background-color: #0c60a2;
+			background-image: url(../img/meat.png);
+			a {
+				&:hover {
+				background-color: darken(#0c60a2, 10%);
+				background-image: url(../img/meat.png);
+				}
+			}
+			
+		}
+	}
 }

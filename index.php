@@ -16,8 +16,7 @@
 
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__topline">			
-			</div>
+			<div class="header__topline"></div>
 			<div class="contain">
 				<div class="header__content">
 					<div class="header__content__logo">
@@ -63,7 +62,23 @@
 						<h2>“Рецепты”</h2>
 						<a href="#nowhere"><span>Перейти в раздел <i></i></span> </a>
 					</div>
-			 	</div>	
+			 	</div>			 	
+			</div>
+			<div class="botmenu">
+			 		<div class="botmenu__rbg"></div>
+			 		<div class="contain">
+			 			<div class="botmenu__content">
+			 				<div class="botmenu__content__bird">
+			 					<a href="#nowhere"><span>Птица</span></a>
+			 				</div>
+			 				<div class="botmenu__content__soup">
+			 					<a href="#nowhere"><span>Суповые наборы</span></a>
+			 				</div>
+			 				<div class="botmenu__content__meat">
+			 					<a href="#nowhere"><span>Мясо</span></a>
+			 				</div>
+			 			</div>
+			 		</div>
 			</div>
 		</div>
 
