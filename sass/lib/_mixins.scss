@@ -1,0 +1,31 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin background-clip($clip) {
+    -o-background-clip: $clip;
+       background-clip: $clip;
+}
+	
+
+@mixin transition($t) {
+	-webkit-transition: all $t linear;
+	   -moz-transition: all $t linear;
+	    -ms-transition: all $t linear;
+	     -o-transition: all $t linear;
+	        transition: all $t linear;
+}	
+
+@mixin background-size($size) {
+	-webkit-background-size: $size;
+	     -o-background-size: $size;
+	        background-size: $size;
+}
+	
+@mixin text-shadow ($shadow) {
+	text-shadow: $shadow;
+}
+	

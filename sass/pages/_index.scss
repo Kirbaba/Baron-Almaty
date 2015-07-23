@@ -1,3 +1,62 @@
+$homeHeight: 443px;
 .home {
-	width: 70%;	
+	background-color: #FFDE00;
+	position: relative;
+	height: $homeHeight;
+	width: 100%;
+	.fotorama{
+		display: block;
+		float: left;
+		width: 60%;
+	}
+	&__baner {	
+		width: 40%;
+		height: 490px;
+		display: block;
+		float: left;
+		position: absolute;
+		right: 80px;
+		top: -35px;		
+		background-image: url('../img/img_25_804.png');
+		background-repeat: no-repeat;
+		background-position: 0% 100%;
+		&__link {
+			margin: 170px;
+			h2{
+				color: #112633;
+				font-size: 35px;
+				font-weight: bold;
+				font-style: italic;
+				margin-left: 60px;
+				margin-bottom: 25px;
+			}
+			a {
+				display: block;
+				position: relative;
+				width: 252px;
+				height: 55px;
+				line-height: 55px;
+				background-image: url(../img/home_bt.png);
+				color: #fff;
+				font-size: 18px;
+				font-weight: bold;
+				font-style: italic;
+				text-align: center;
+				&:hover{
+					text-decoration: none;
+					background-image: url(../img/home_bt_hover.png);					
+				}
+				span{
+					i {
+					background-image: url(../img/btn_arrow.png);
+					display: inline-block;
+					margin-left: 10px;
+					height: 10px;
+					width: 24px;
+					}
+				}
+				
+			}
+		}
+	}	
 }

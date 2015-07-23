@@ -51,20 +51,19 @@
 		</header>
 
 		<div class="content">
-			<div class="home">
-				
-					<div class="fotorama" data-arrows="false" data-height="845/465" data-autoplay="true" data-loop="true">					
-						
-							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
-						
-							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
-						
-							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
-						
-							<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
-						
+			<div class="home">								
+				<div class="fotorama" data-arrows="false" data-height="845/465" data-autoplay="true" data-loop="true">											
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">						
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">						
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">						
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">				
 				</div>
-				
+				<div class="home__baner">					
+					<div class="home__baner__link">
+						<h2>“Рецепты”</h2>
+						<a href="#nowhere"><span>Перейти в раздел <i></i></span> </a>
+					</div>
+			 	</div>	
 			</div>
 		</div>
 
