@@ -34,4 +34,46 @@
   &__yt {
     background-image: url("../img/youtube.png");
   }
+
+  &__repost {
+    h2 {
+      color: #23455b;
+      font-size: 23px;
+      font-weight: bold;
+      padding-left: 0!important;
+    }
+    &__fb{
+      display: block;
+      float: left;
+      width: 86px;
+      height: 31px;
+      background-image: url(../img/soc/soc_03.png);
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      color: #A2B2C6;
+      text-decoration: none;
+      line-height: 31px;
+      padding-left: 50px;
+      &:hover {
+        color: #a2b2c6;
+        text-decoration: none;
+      }
+    }
+    &__vk{
+      @extend .soc__repost__fb;
+      background-image: url(../img/soc/soc_05.png);
+    }
+    &__tw{
+      @extend .soc__repost__fb;
+      background-image: url(../img/soc/soc_07.png);
+    }
+    &__gp{
+      @extend .soc__repost__fb;
+      background-image: url(../img/soc/soc_09.png);
+    }
+    &__ok{
+      @extend .soc__repost__fb;
+      background-image: url(../img/soc/soc_11.png);
+    }
+  }
 }

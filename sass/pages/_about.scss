@@ -1,0 +1,26 @@
+.about {
+	display: inline-block;
+	position: relative;
+	margin: 25px 0 40px;
+	padding: 25px 30px;
+	width: 100%;
+	&__container {
+		width: 670px;
+		display: block;
+		margin: 0 auto;
+		h2 {
+			color: #23455b;
+			font-size: 23px;
+			font-weight: bold;
+			padding-left: 20px;
+		}
+		p {
+			color: #23455b;
+			font-size: 14px;
+			padding-left: 20px;
+		}
+		img {
+			margin-left: -20px;
+		}
+	}
+}
