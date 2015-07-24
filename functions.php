@@ -226,3 +226,44 @@ function __crumbs_tax( $term_id, $tax, $sep, $linkpatt ){
     
     return implode('', $termlinks );
 }
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+    register_post_type( 'recipes',
+        array(
+            'labels' => array( // добавляем новые элементы в административную частьку
+                'name' => __( 'Рецепты' ),
+                'has_archive' => true,
+                'not_found' => 'Ничего не найдено',
+                'not_found_in_trash' => 'В корзине рецептов не найдено'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'recipes'),
+            'supports' => array( //добавляем элементы в редактор
+                'title',
+                'editor',
+                'author',
+                'trackbacks',
+                'comments',
+                'thumbnail',
+                'page-attributes',
+                'post-formats',
+                'custom-fields'
+            ),
+            'taxonomies' => array('category', 'post_tag') //добавляем к записям необходимый набор таксономий
+        ));
+}
+
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+    if(is_category() || is_tag()) {
+        $post_type = get_query_var('post_type');
+        if($post_type)
+            $post_type = $post_type;
+        else
+            $post_type = array('post','recipes');
+        $query->set('post_type',$post_type);
+        return $query;
+    }
+}

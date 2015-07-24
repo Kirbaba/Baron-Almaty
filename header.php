@@ -20,7 +20,7 @@
 			<div class="contain">
 				<div class="header__content">
 					<div class="header__content__logo">
-						<a href="#nowhere">
+						<a href="<?php echo get_home_url();?>">
 							<img src="<?php bloginfo('template_directory'); ?>/img/LOGO_Vse-1.png" alt="placeholder+image">
 						</a>
 					</div>
@@ -39,10 +39,10 @@
 					<nav class="navMenu">							
 							<ul>
 								<li><a href="#nowhere">О компании</a></li>
-								<li><a href="#nowhere">Покупателям</a></li>
+								<li><a href="<?php echo get_category_link(2); ?>">Покупателям</a></li>
 								<li><a href="#nowhere">Рецепты</a></li>
 								<li><a href="#nowhere">Партнерам</a></li>
-								<li><a href="#nowhere">Контакты</a></li>
+								<li><a href="<?php echo get_permalink(27); ?>">Контакты</a></li>
 							</ul>
 						</nav>	
 				</div>

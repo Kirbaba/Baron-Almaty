@@ -1,0 +1,43 @@
+.contacts {
+	border: 3px solid #E9F1F6;
+	display: inline-block;
+	position: relative;
+	margin: 25px 0 40px;
+	padding: 25px 30px;
+	width: 100%;
+	&__text {
+		display: block;
+		float: left;
+		position: relative;
+		width: 30%;
+		h2 {
+			color: #23455b;
+			font-family: "Verdana";
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0;
+		}
+		h4 {
+			color: #23455b;
+			font-family: "Verdana";
+			font-size: 13px;
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+		p {
+			color: #23455b;
+			font-family: "Verdana";
+			font-size: 13px;
+			font-weight: normal;
+		}
+	}
+	&__map {
+		display: block;
+		float: left;
+		position: relative;
+		width: 70%;
+		#map_canvas{
+			height: 310px;
+		}
+	}
+}
