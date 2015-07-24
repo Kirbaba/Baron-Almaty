@@ -4,11 +4,10 @@
         <div class="contain">
             <div class="navline__bg"></div>
             <div class="navline__contain">
-                <p><?php single_cat_title(''); ?></p>
+                <?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' &#8594; '); ?>
             </div>
         </div>
     </div>
-
     <div class="contain">
    
 
