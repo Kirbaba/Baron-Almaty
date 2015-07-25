@@ -9,8 +9,6 @@
         </div>
     </div>
     <div class="contain">
-   
-
                         <section class="category">
                                 <!-- Имеются ли посты для отображения? -->
                                 <?php if ( have_posts() ) : ?>

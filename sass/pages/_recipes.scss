@@ -1,0 +1,84 @@
+.recipes {		
+	width: 100%;
+	display: inline-block;
+	&__block {
+		width: 100%;
+		padding: 0;
+		display: inline-block;
+		position: relative;
+		margin: 25px 0;
+		border: 3px solid #E9F1F6;
+		&__thumb {
+			width: 605px;
+			display: block;
+			float: left;
+			img {
+				max-width: 605px;
+				height: auto;
+			}
+		}
+		&__content {
+			display: block;
+			float: left;
+			width: 385px;
+			padding-left: 25px;
+			h2 {
+				color: #23455b;
+				font-size: 23px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			.toRecipe {
+				display: block;
+				width: 282px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				text-decoration: none;
+				margin-top: 70px;
+				margin-bottom: 15px;
+				background-color: #21c12f;
+				color: #FFF;
+				font-size: 20px;
+			}
+
+			&__info {
+				width: 342px;
+				height: 95px;
+				background-color: #e9f1f5;
+				display: inline-block;
+				line-height: 95px;
+				padding: 0 10px;
+				p {
+					display: inline-block;
+					width: 49%;
+					line-height: normal;
+					vertical-align: middle;
+					padding-left: 5px;
+					i {
+						display: inline-block;
+						width: 26px;
+						height: 25px;
+						margin-right: 10px;
+						float: left;
+						margin-top: 5px;
+					}
+					.recipesTime {
+						background-image: url('../img/reciep.png');
+						background-repeat: no-repeat;
+					}
+
+					.recipesPers {
+						background-image: url('../img/recipPers.png');
+						background-repeat: no-repeat;
+					}
+					small {
+						font-size: 9px;
+						display: block;
+					}
+				}
+			}
+		}
+
+	}
+}
