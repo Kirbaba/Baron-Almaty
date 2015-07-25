@@ -39,6 +39,14 @@
                 <div class="recipes__text">
                 	<article>
                 		<?php the_content(); ?>
+                		<div class="soc__repost">
+		            		<h2>Понравился рецепт? Расскажи друзьям</h2>
+		            		<a href="#nowhere" class="soc__repost__fb">73</a>
+		            		<a href="#nowhere" class="soc__repost__vk">671</a>
+		            		<a href="#nowhere" class="soc__repost__tw">75</a>
+		            		<a href="#nowhere" class="soc__repost__gp">0</a>
+		            		<a href="#nowhere" class="soc__repost__ok">122</a>
+		            	</div>
                 	</article>                           
                     <aside>
                     	<h3>Ингридиенты:</h3>
@@ -59,5 +67,4 @@
     </div>
           
      
-<?php get_footer(); ?>
 <?php get_footer(); ?>

@@ -11,7 +11,7 @@
 				<div class="home__baner">					
 					<div class="home__baner__link">
 						<h2>“Рецепты”</h2>
-						<a href="#nowhere"><span>Перейти в раздел <i></i></span> </a>
+						<a href="<?php echo get_category_link(2); ?>"><span>Перейти в раздел <i></i></span> </a>
 					</div>
 					<div class="home__baner__tomato"></div>
 			 	</div>			 	
