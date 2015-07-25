@@ -31,18 +31,7 @@
 
                         <a href="<?php the_permalink() ?>" class="toRecipe">Перейти к рецепту</a>
 
-                        <div class="recipes__block__content__info">
-                            <p>
-                                <i class="recipesTime"></i>
-                                <small>Время приготовления:</small>
-                                 3 ч. 30 мин.
-                            </p>
-                            <p>
-                                <i class="recipesPers"></i>
-                                <small>Рецепт на:</small>
-                                 5 человек
-                            </p>
-                        </div>
+                       
                     </div>
                         
                  

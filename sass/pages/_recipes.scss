@@ -15,7 +15,8 @@
 			img {
 				max-width: 605px;
 				height: auto;
-			}
+			}			
+			
 		}
 		&__content {
 			display: block;
@@ -77,8 +78,92 @@
 						display: block;
 					}
 				}
-			}
+			}			
 		}
 
 	}
 }
+
+.recipes__block__content__single {
+	@extend .recipes__block__content;
+	width: 330px;
+	display: block;
+	float: left;
+	h2 {
+		font-size: 22px;
+		margin-bottom: 25px;
+	}
+}
+
+.recipes__block__thumb__single {	
+	@extend .recipes__block__thumb__single;
+	width: 575px;
+	display: block;
+	float: left;
+	img {
+		max-width: 575px;
+	}
+}
+
+.recipes__text {
+	display: block;
+	float: left;
+	margin: 25px 0;
+	article {
+		width: 375 / 610 * 100%;
+		display: block;
+		float: left;
+	ol {
+			margin-left: 25px;
+			list-style-type: none;
+			list-style: none;
+     
+			counter-reset: li-counter;
+			li {
+				padding-left: 20px;
+				position: relative;
+				padding-bottom: 15px;				
+				&:before{
+					position: absolute;
+					top: 0;
+					left: -20px;
+					width: 25px;
+					height: 25px;
+					 
+					font-size: 14px;
+					
+					text-align: center;
+					color: #23455b;
+
+					border: 1px solid #23455b;
+					border-radius: 50%;
+					
+					content: counter(li-counter);
+					counter-increment: li-counter;
+				}
+			}
+
+		}
+	}
+	aside {
+		width: 334px;
+		background-color: #e9f1f5;
+		margin-left: 25px;
+		padding: 25px;
+		display: block;
+		float: left;
+		p {
+			color: #23455b;
+			font-size: 15px;
+		}
+		h3 {
+			color: #23455b;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+	}
+}
+				
+				
+			
