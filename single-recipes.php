@@ -44,6 +44,7 @@ $post_id = get_the_ID();
                        человек
                     </p>
                 </div>
+
             </div>
             <div class="recipes__text">
                 <article>
@@ -89,7 +90,9 @@ $post_id = get_the_ID();
                 <?php endwhile; ?>
             </div>
         </section>
-    </div>
+
+
+
 
 
     <?php get_footer(); ?>

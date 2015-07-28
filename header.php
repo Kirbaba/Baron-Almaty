@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__topline"></div>
@@ -30,10 +29,10 @@
 							<p>Работаем с 9:00 до 18:00</p>
 						</div>
 						<div class="header__content__menuline__offline">
-							<a href="#nowhere"><span>Offline консультант</span></a>
+							<a data-toggle="modal" href="#callme"><span>Offline консультант</span></a>
 						</div>
 						<div class="header__content__menuline__mailus">
-							<a href="#nowhere"><span><i></i>Написать нам</span></a>
+							<a data-toggle="modal" href="#callme"><span><i></i>Написать нам</span></a>
 						</div>						
 					</div>
 					<nav class="navMenu">							

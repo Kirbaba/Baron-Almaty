@@ -1,0 +1,83 @@
+.modal-dialog{
+  background-color: #fff;
+  text-align: center;
+  width: 450px;
+  
+  h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+}
+
+#callme{
+  background-color: rgba(57, 87, 107, 1);
+}
+
+#thnx {
+  @extend #callme;
+}
+.modal-header {
+  border-bottom: 0;
+  padding: 35px 0;
+  .close {    
+    width: 30px;
+    height: 30px;
+    background-color: #fd0;
+    background-image: url("../img/close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: -45px -15px 0 0;
+    opacity: 1;
+    outline: none;
+  }
+  .close:hover{
+    background-color: derken(#fd0, 15%)
+  }
+  p{
+    color: #2d2d2d;
+    font-size: 20px;
+
+  }
+  h1{
+    color: #2d2d2d;
+    font-family: "OpenSans", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+}
+  
+
+.formPopup {
+  width: 367px;
+  height: 56px;
+  border: 2px solid rgba(0,0,0,.06);
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+  padding: 0 20px;  
+
+  &Text {
+    width: 367px;
+    height: 274px;
+    border: 2px solid rgba(0,0,0,.06);
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 20px;
+    resize: none;
+  }
+
+  &Sub {
+    width: 371px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ef4b4b;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+  }
+}
