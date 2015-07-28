@@ -28,7 +28,7 @@
             	<input type="text" class="formPopup" placeholder="Ваше имя">
             	<input type="email" class="formPopup" placeholder="Ваш e-mail">
             	<textarea class="formPopupText" placeholder="Введите ваше сообщение"></textarea>
-            	<input type="submit" value="Отправить сообщение">
+            	<input class="formPopupSub" type="submit" value="Отправить сообщение">
             </form>
             
         </div>
