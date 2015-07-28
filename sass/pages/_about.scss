@@ -1,8 +1,9 @@
 .about {
 	display: inline-block;
+	border: 3px solid #E9F1F6;
 	position: relative;
 	margin: 25px 0 40px;
-	padding: 25px 30px;
+	padding: 25px 30px 45px;
 	width: 100%;
 	&__container {
 		width: 670px;
@@ -13,6 +14,7 @@
 			font-size: 23px;
 			font-weight: bold;
 			padding-left: 20px;
+			margin-top: 5px;
 		}
 		p {
 			color: #23455b;
@@ -22,5 +24,8 @@
 		img {
 			margin-left: -20px;
 		}
+	}
+	.soc__repost {
+		margin-top: 60px;
 	}
 }
