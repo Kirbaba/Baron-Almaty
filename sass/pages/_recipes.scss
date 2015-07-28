@@ -12,9 +12,11 @@
 			width: 605px;
 			display: block;
 			float: left;
+			overflow: hidden;
 			img {
-				max-width: 605px;
-				height: auto;
+				width: auto;
+				height: 395px;
+				overflow: hidden;
 			}			
 			
 		}

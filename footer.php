@@ -19,7 +19,21 @@
 			</div>
 		</footer>
 	</div>
-    
+
+    <div class="modal fade" id="callme" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
+            <form action="#">
+            	<input type="text" class="formPopup" placeholder="Ваше имя">
+            	<input type="email" class="formPopup" placeholder="Ваш e-mail">
+            	<textarea class="formPopupText" placeholder="Введите ваше сообщение"></textarea>
+            	<input type="submit" value="Отправить сообщение">
+            </form>
+            
+        </div>
+    </div>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

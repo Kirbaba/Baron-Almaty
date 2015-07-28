@@ -1,0 +1,54 @@
+.modal-dialog{
+  background-color: #fff;
+  text-align: center;
+  width: 450px;
+  
+  h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+}
+.modal-header {
+  border-bottom: 0;
+  padding: 35px 0;
+  .close {    
+    width: 30px;
+    height: 30px;
+    background-color: #fd0;
+    background-image: url("../img/close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: -30px -30px 0 0;
+    opacity: 1;
+    outline: none;
+  }
+  .close:hover{
+    background-color: derken(#fd0, 15%)
+  }
+  p{
+    font-size: 14px;
+    color: #374157;
+  }
+
+}
+  
+
+.formPopup {
+  width: 367px;
+  height: 56px;
+  border: 2px solid rgba(0,0,0,.06);
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+  padding: 0 20px;  
+
+  &Text {
+    width: 367px;
+    height: 274px;
+    border: 2px solid rgba(0,0,0,.06);
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    resize: none;
+  }
+}
