@@ -25,12 +25,21 @@
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
             <form action="#">
-            	<input type="text" class="formPopup" placeholder="Ваше имя">
-            	<input type="email" class="formPopup" placeholder="Ваш e-mail">
-            	<textarea class="formPopupText" placeholder="Введите ваше сообщение"></textarea>
-            	<input class="formPopupSub" type="submit" value="Отправить сообщение">
+            	<input type="text" class="formPopup" placeholder="Ваше имя" required>
+            	<input type="email" class="formPopup" placeholder="Ваш e-mail" required>
+            	<textarea class="formPopupText" placeholder="Введите ваше сообщение" required></textarea>
+            	<input class="formPopupSub" type="submit" data-toggle="modal" href="#thnx" value="Отправить сообщение">
             </form>
             
+        </div>
+    </div>
+
+    <div class="modal fade" id="thnx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
+            <h1>Спасибо!</h1>
+            <p><b>Ваше сообщение отправлено. <br> Наши менеджеры ответят<br>  Вам в течени 72 часов.</b></p>
         </div>
     </div>
 </div>

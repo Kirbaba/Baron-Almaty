@@ -9,6 +9,14 @@
   }
 
 }
+
+#callme{
+  background-color: rgba(57, 87, 107, 1);
+}
+
+#thnx {
+  @extend #callme;
+}
 .modal-header {
   border-bottom: 0;
   padding: 35px 0;
@@ -27,8 +35,15 @@
     background-color: derken(#fd0, 15%)
   }
   p{
-    font-size: 14px;
-    color: #374157;
+    color: #2d2d2d;
+    font-size: 20px;
+
+  }
+  h1{
+    color: #2d2d2d;
+    font-family: "OpenSans", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
   }
 
 }
