@@ -1,5 +1,4 @@
 ﻿<? get_header() ?>
-
 		<div class="content">
 			<div class="home">								
 				<div class="fotorama" data-arrows="false" data-height="845/465" data-autoplay="true" data-loop="true">											

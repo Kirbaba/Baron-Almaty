@@ -38,9 +38,9 @@
 					</div>
 					<nav class="navMenu">							
 							<ul>
-								<li><a href="<?php echo get_permalink(30); ?>">О компании</a></li>
-								<li><a href="<?php echo get_category_link(2); ?>">Покупателям</a></li>
-								<li><a href="<?php echo get_category_link(7); ?>">Рецепты</a></li>
+								<li><a href="<?php echo '/about-company'; ?>">О компании</a></li>
+								<li><a href="<?php echo get_category_link(8);?>">Покупателям</a></li>
+								<li><a href="<?php echo get_category_link(9); ?>">Рецепты</a></li>
 								<li><a href="#nowhere">Партнерам</a></li>
 								<li><a href="<?php echo get_permalink(27); ?>">Контакты</a></li>
 							</ul>
