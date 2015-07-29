@@ -16,9 +16,17 @@ function add_script(){
     wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.js', array(), '1');
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
-    
+    wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/mail.js', array(), '1');
+    wp_localize_script( 'jquery', 'myajax',
+        array(
+            'url' => admin_url('admin-ajax.php')
+        ));
 
 }
+
+add_action('wp_ajax_get_mail', 'get_mail_function');
+add_action('wp_ajax_nopriv_get_mail', 'get_mail_function');
+
 
 define('ADD_BARON_DIR', plugin_dir_path(__FILE__));
 define('ADD_BARON_URL', plugin_dir_url(__FILE__));
@@ -29,6 +37,17 @@ require_once(ADD_BARON_DIR . "/lib/Baron.php");
 
 add_action('wp_enqueue_scripts', 'add_style');
 add_action('wp_enqueue_scripts', 'add_script');
+
+function get_mail_function(){
+    $name = $_POST['name'];
+    $from_mail = $_POST['mail'];
+    $text = $_POST['text'];
+
+    $massage = "Имя: $name <br /> e-mail: $from_mail <br /> $text";
+
+    mail('korol_dima@list.ru', 'My Subject', $massage, "Content-type: text/html; charset=UTF-8\r\n");
+}
+
 
 function prn($content)
 {

@@ -25,15 +25,15 @@
 	        <div class="modal-header">
 	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
 	            <form method="POST" id="formx" action="javascript:void(null);" onsubmit="call()">
-	            	<input type="text" name="name" class="formPopup" placeholder="Ваше имя" >
-	            	<input type="email" name="email" class="formPopup" placeholder="Ваш e-mail">
-	            	<textarea class="formPopupText" name="mes" placeholder="Введите ваше сообщение"></textarea>
-	            	<input class="formPopupSub" id=""type="submit" data-toggle="modal" href="#thnx" value="Отправить сообщение">
+	            	<input type="text" name="name" id = "name_inp" class="formPopup" placeholder="Ваше имя" >
+	            	<input type="email" name="email" id = "mail_inp" class="formPopup" placeholder="Ваш e-mail">
+	            	<textarea class="formPopupText" name="mes" id = "text" placeholder="Введите ваше сообщение"></textarea>
+	            	<input class="formPopupSub" id="button"type="submit" data-toggle="modal" href="#thnx" value="Отправить сообщение">
 	            </form>
 	            
 	        </div>
 	    </div>
-	<div>
+	</div>
 
     <div class="modal fade" id="thnx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -46,5 +46,10 @@
 </div>
 </div>
 <?php wp_footer(); ?>
+        <!-- RedHelper -->
+        <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
+                src="https://web.redhelper.ru/service/main.js?c=prides">
+        </script>
+        <!--/Redhelper -->
 </body>
 </html>
