@@ -25,10 +25,10 @@
 	        <div class="modal-header">
 	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
 	            <form method="POST" id="formx" action="javascript:void(null);" onsubmit="call()">
-	            	<input type="text" name="name" id = "name_inp" class="formPopup" placeholder="Ваше имя" >
-	            	<input type="email" name="email" id = "mail_inp" class="formPopup" placeholder="Ваш e-mail">
-	            	<textarea class="formPopupText" name="mes" id = "text" placeholder="Введите ваше сообщение"></textarea>
-	            	<input class="formPopupSub" id="button"type="submit" data-toggle="modal" href="#thnx" value="Отправить сообщение">
+	            	<input type="text" name="name" id = "name_inp" class="formPopup" placeholder="Ваше имя" required >
+	            	<input type="email" name="email" id = "mail_inp" class="formPopup" placeholder="Ваш e-mail" required>
+	            	<textarea class="formPopupText" name="mes" id = "text" placeholder="Введите ваше сообщение" required></textarea>
+	            	<input class="formPopupSub" type="button" id="button" href="#thnx" value="Отправить сообщение" style="cursor: pointer">
 	            </form>
 	            
 	        </div>
@@ -46,10 +46,12 @@
 </div>
 </div>
 <?php wp_footer(); ?>
-        <!-- RedHelper -->
-        <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
-                src="https://web.redhelper.ru/service/main.js?c=prides">
-        </script>
-        <!--/Redhelper -->
+        <!-- BEGIN JIVOSITE CODE {literal} -->
+        <script type='text/javascript'>
+            (function(){ var widget_id = 'FXpN6numvE';
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+        <!-- {/literal} END JIVOSITE CODE -->
+
+
 </body>
 </html>

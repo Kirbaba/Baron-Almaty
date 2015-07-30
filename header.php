@@ -9,7 +9,21 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOWKyamSxMTXclSDFmJ2N4Am20PCTD6I&sensor=FALSE">
     </script>
     <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+
+
     <?php wp_head(); ?>
+
+    <script>
+        function jivo_onLoadCallback() {
+            if (jivo_config.chat_mode == "online") {
+                $('.header__content__menuline__offline').css("background-color", "green");
+                $('#jivo').html('<span>Online консультант</span>');
+            } else {
+                $('.header__content__menuline__offline').css("background-color", "#ef4a4a");
+                $('#jivo').html('<span>Offline консультант</span>');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -29,7 +43,9 @@
 							<p>Работаем с 9:00 до 18:00</p>
 						</div>
 						<div class="header__content__menuline__offline">
-							<a data-toggle="modal" href="#callme"><span>Offline консультант</span></a>
+							<a id="jivo" data-toggle="modal" href="javascript:jivo_api.open();">
+                                <span>Offline консультант</span>
+                            </a>
 						</div>
 						<div class="header__content__menuline__mailus">
 							<a data-toggle="modal" href="#callme"><span><i></i>Написать нам</span></a>
@@ -38,8 +54,8 @@
 					<nav class="navMenu">							
 							<ul>
 								<li><a href="<?php echo '/about-company'; ?>">О компании</a></li>
-								<li><a href="<?php echo get_category_link(8);?>">Покупателям</a></li>
-								<li><a href="<?php echo get_category_link(9); ?>">Рецепты</a></li>
+								<li><a href="<?php echo get_category_link(2);?>">Покупателям</a></li>
+								<li><a href="<?php echo get_category_link(3); ?>">Рецепты</a></li>
 								<li><a href="#nowhere">Партнерам</a></li>
 								<li><a href="<?php echo get_permalink(27); ?>">Контакты</a></li>
 							</ul>

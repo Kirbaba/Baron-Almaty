@@ -45,7 +45,7 @@ function get_mail_function(){
 
     $massage = "Имя: $name <br /> e-mail: $from_mail <br /> $text";
 
-    mail('korol_dima@list.ru', 'My Subject', $massage, "Content-type: text/html; charset=UTF-8\r\n");
+    mail('korol_dima@list.ru', 'Сообщение с вашего сайта', $massage, "Content-type: text/html; charset=UTF-8\r\n");
 }
 
 

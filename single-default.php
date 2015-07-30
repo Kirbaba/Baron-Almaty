@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="content">   
+    <div class="content">
         <div class="navline">
             <div class="contain">
                 <div class="navline__bg"></div>
@@ -9,9 +9,9 @@
             </div>
         </div>
 
-        <div class="contain">                
+        <div class="contain">
             <section class="single">
-                
+
                 <?php while (have_posts()): the_post(); ?>
                 <?php if ( has_post_thumbnail() ): ?>
                 <div class="single__thumb">
@@ -19,13 +19,13 @@
                     <span><?php the_title(); ?></span>
                 </div>
                 <div class="single__content">
-                    <?php  endif;?>                            
+                    <?php  endif;?>
                     <?php the_content(); ?>
                     <?php endwhile; ?>
                 </div>
             </section>
         </div>
     </div>
-          
-     
+
+
 <?php get_footer(); ?>

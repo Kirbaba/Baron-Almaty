@@ -9,37 +9,38 @@
         </div>
     </div>
     <div class="contain">
-                        <section class="category">
+
                             <?php
                             $url = $_SERVER['REQUEST_URI'];
                             $url = explode("/", $url);
-                            if(empty($url[3])){
-                                do_shortcode('[cat]');
-
+                            if(empty($url[3])){ ?>
+                                <section class="category">
+                                     <?php do_shortcode('[cat]');?>
+                                 </section>
+                            <?php
                             }
-                                else{
 
-
+         else{
                                     if ( have_posts() ) : ?>
                                         <!-- Цикл вывода постов -->
-
-                                        <?php while ( have_posts() ) : the_post(); ?>
-
-
-                                            <div class="category__block">
-                                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Постоянная ссылка на <?php the_title_attribute(); ?>">
-                                                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail('full', array('class'=>'new-img-pr'));; } ?>
-                                                    <span><?php the_title(); ?></span>
-                                                </a>
+                                        <?php while (have_posts()): the_post(); ?>
+                                            <?php if ( has_post_thumbnail() ): ?>
+                                        <section class="single">
 
 
+                                            <div class="single__thumb">
+                                                <?php { echo get_the_post_thumbnail( $id, '100%', array('class' => 'alignleft') ); }?>
+                                                <span><?php the_title(); ?></span>
+                                            </div>
+                                            <div class="single__content">
+
+                                                <?php the_content(); ?>
 
                                             </div>
+                                        </section>
+                                            <?php  endif;?>
+                                        <?php endwhile; ?>
 
-
-
-
-                                        <?php endwhile; // конец цикла?>
                                         <div style="text-align:right; width: 100%; padding-left: 60px">
                                             <?php my_pagenavi() ?>
                                         </div>
@@ -50,9 +51,9 @@
 
                             ?>
 
-                        </section>
 
-          
+
+
     </div>
 </div>
 <?php get_footer(); ?>
