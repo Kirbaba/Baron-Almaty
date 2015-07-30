@@ -17,15 +17,19 @@ function add_script(){
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
     wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/mail.js', array(), '1');
+
     wp_localize_script( 'jquery', 'myajax',
         array(
             'url' => admin_url('admin-ajax.php')
         ));
-
+    wp_enqueue_script( 'status', get_template_directory_uri() . '/js/status.js', array(), '1');
 }
 
 add_action('wp_ajax_get_mail', 'get_mail_function');
 add_action('wp_ajax_nopriv_get_mail', 'get_mail_function');
+
+add_action('wp_ajax_set_status', 'set_status_function');
+add_action('wp_ajax_nopriv_get_status', 'set_status_function');
 
 
 define('ADD_BARON_DIR', plugin_dir_path(__FILE__));
@@ -46,6 +50,23 @@ function get_mail_function(){
     $massage = "Имя: $name <br /> e-mail: $from_mail <br /> $text";
 
     mail('korol_dima@list.ru', 'Сообщение с вашего сайта', $massage, "Content-type: text/html; charset=UTF-8\r\n");
+}
+
+function set_status_function(){
+    $option_name = 'status_kons' ;
+    $newvalue = $_POST['status'] ;
+    $autoload = 'no';
+    prn($_POST['status']);
+    if ( get_option( $option_name ) != $newvalue ) {
+        update_option( $option_name, $newvalue,$autoload );
+    } else {
+
+        $deprecated = ' ';
+
+        add_option( $option_name, $newvalue, $deprecated, $autoload );
+    }
+
+    die();
 }
 
 

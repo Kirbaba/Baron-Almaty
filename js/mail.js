@@ -3,7 +3,6 @@ jQuery(document).on('click', '#button', function (){
     var mail = jQuery("#mail_inp").val();
     var text = jQuery("#text").val();
 
-console.log(name);
     if(name == "" || mail == "" || text == ""){
 
         alert ("Заполните все поля");

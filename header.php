@@ -13,17 +13,15 @@
 
     <?php wp_head(); ?>
 
-    <script>
+  <!--  <script>
         function jivo_onLoadCallback() {
             if (jivo_config.chat_mode == "online") {
-                $('.header__content__menuline__offline').css("background-color", "green");
-                $('#jivo').html('<span>Online консультант</span>');
+                var status = 1;
             } else {
-                $('.header__content__menuline__offline').css("background-color", "#ef4a4a");
-                $('#jivo').html('<span>Offline консультант</span>');
+                var status = 0;
             }
         }
-    </script>
+    </script>-->
 </head>
 
 <body>
@@ -52,9 +50,21 @@
 						<!-- <div class="header__content__menuline__offline">
 							<a data-toggle="modal" href="#callme"><span>Offline консультант</span></a>
 						</div> -->
-						<div class="header__content__menuline__online">
-							<a id="jivo" data-toggle="modal" href="javascript:jivo_api.open();"><span>Online консультант</span></a>
-						</div>
+                        <?php
+                            $status = get_option( 'status_kons' );
+
+                        if ($status == '1'){ ?>
+                            <div class="header__content__menuline__online">
+                                <a id="jivo" data-toggle="modal" href="javascript:jivo_api.open();"><span>Online консультант</span></a>
+                            </div>
+                       <?php } else { ?>
+                            <div class="header__content__menuline__offline">
+                                <a data-toggle="modal" href="javascript:jivo_api.open();"><span>Offline консультант</span></a>
+                            </div>
+                        <?php } ?>
+
+
+
 						<div class="header__content__menuline__mailus">
 							<a data-toggle="modal" href="#callme"><span><i></i>Написать нам</span></a>
 						</div>						
