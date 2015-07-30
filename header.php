@@ -42,10 +42,18 @@
 							<h3>+7 |7171| <span>789-89-87</span></h3>
 							<p>Работаем с 9:00 до 18:00</p>
 						</div>
-						<div class="header__content__menuline__offline">
+
+						<!--<div class="header__content__menuline__offline">
 							<a id="jivo" data-toggle="modal" href="javascript:jivo_api.open();">
                                 <span>Offline консультант</span>
                             </a>
+						</div>-->
+
+						<!-- <div class="header__content__menuline__offline">
+							<a data-toggle="modal" href="#callme"><span>Offline консультант</span></a>
+						</div> -->
+						<div class="header__content__menuline__online">
+							<a id="jivo" data-toggle="modal" href="javascript:jivo_api.open();"><span>Online консультант</span></a>
 						</div>
 						<div class="header__content__menuline__mailus">
 							<a data-toggle="modal" href="#callme"><span><i></i>Написать нам</span></a>
