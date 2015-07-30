@@ -235,26 +235,30 @@ ul {
           vertical-align: middle;
           width: 35%;
           padding-left: 20px; }
-      .header__content__menuline__offline, .header__content__menuline__mailus {
+      .header__content__menuline__offline, .header__content__menuline__online, .header__content__menuline__mailus {
         display: block;
         float: left;
         width: 170px;
         line-height: 90px;
         background-color: #ef4a4a; }
-        .header__content__menuline__offline a, .header__content__menuline__mailus a {
+        .header__content__menuline__offline a, .header__content__menuline__online a, .header__content__menuline__mailus a {
           display: block;
           line-height: 90px;
           color: #FFF;
           font-size: 16px;
           height: 90px;
           width: 170px; }
-          .header__content__menuline__offline a span, .header__content__menuline__mailus a span {
+          .header__content__menuline__offline a span, .header__content__menuline__online a span, .header__content__menuline__mailus a span {
             line-height: normal;
             display: inline-block;
             vertical-align: middle;
             padding: 0 35px; }
-          .header__content__menuline__offline a:hover, .header__content__menuline__mailus a:hover {
+          .header__content__menuline__offline a:hover, .header__content__menuline__online a:hover, .header__content__menuline__mailus a:hover {
             background-color: #eb1b1b; }
+      .header__content__menuline__online {
+        background-color: green; }
+        .header__content__menuline__online a:hover {
+          background-color: #006700; }
       .header__content__menuline__mailus {
         background-color: #268bda;
         width: 190px; }
@@ -283,8 +287,7 @@ ul {
   float: left; }
   .navMenu ul li {
     display: inline-block;
-    line-height: 30px;
-    padding: 0 12px; }
+    padding: 0 10px; }
     .navMenu ul li a {
       color: #FFF;
       text-transform: uppercase;
