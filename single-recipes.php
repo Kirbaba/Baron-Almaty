@@ -48,15 +48,18 @@ $post_id = get_the_ID();
             </div>
             <div class="recipes__text">
                 <article>
-                    <?php the_content(); ?>
-                    <div class="soc__repost">
+                    <?php the_content();?>
+                    <!--<h2>Понравился рецепт? Расскажи друзьям</h2>
+
+                    --><?php /*do_shortcode('[socialshare facebook = "1" twiter = "1" linkedin = "1" googlepluseone="0" pinterest = "1" fixed = "0" titleshare=""]');*/?>
+                    <!--<div class="soc__repost">
                         <h2>Понравился рецепт? Расскажи друзьям</h2>
                         <a href="#nowhere" class="soc__repost__fb">73</a>
                         <a href="#nowhere" class="soc__repost__vk">671</a>
                         <a href="#nowhere" class="soc__repost__tw">75</a>
                         <a href="#nowhere" class="soc__repost__gp">0</a>
                         <a href="#nowhere" class="soc__repost__ok">122</a>
-                    </div>
+                    </div>-->
                 </article>
                 <aside>
                     <h3>Ингридиенты:</h3>
@@ -65,7 +68,7 @@ $post_id = get_the_ID();
 
                         $ing = get_post_meta($post_id, $key = '', $single = false);
                     foreach($ing as $key=>$v){
-                        if (($key =='_edit_lock') or ($key == '_edit_last') or ($key == 'time') or ($key == 'kol') or ($key == '_thumbnail_id'))
+                        if (($key =='_edit_lock') or($key == '_wp_old_slug') or($key == 'my_meta_getsocialio_hide') or ($key == '_my_meta_getsocialio_hide') or ($key == '_edit_last') or ($key == 'time') or ($key == 'kol') or ($key == '_thumbnail_id'))
                         {}
                         else{
                         ?>

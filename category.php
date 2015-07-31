@@ -13,7 +13,7 @@
                             <?php
                             $url = $_SERVER['REQUEST_URI'];
                             $url = explode("/", $url);
-                            if(empty($url[3])){ ?>
+                            if(empty($url[2])){ ?>
                                 <section class="category">
                                      <?php do_shortcode('[cat]');?>
                                  </section>

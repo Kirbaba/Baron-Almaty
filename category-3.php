@@ -25,9 +25,9 @@
                         <h2>
                             <?php the_title(); ?>
                         </h2>                          
-                        <a href="#nowhere" class="soc__repost__fb">73</a>
+                        <!--<a href="#nowhere" class="soc__repost__fb">73</a>
                         <a href="#nowhere" class="soc__repost__vk">671</a>
-                        <a href="#nowhere" class="soc__repost__tw">75</a>
+                        <a href="#nowhere" class="soc__repost__tw">75</a>-->
 
                         <a href="<?php the_permalink() ?>" class="toRecipe">Перейти к рецепту</a>
 

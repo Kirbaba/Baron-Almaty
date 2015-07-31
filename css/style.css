@@ -9,3 +9,59 @@
 
 
 #jivo-label {display:none; !important}
+
+.dropdown-menu{
+    background: #1b3546;
+    border: none;
+    border-radius: 0px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    background: #162d3c;
+    color: #fff;
+}
+
+.navMenu ul li {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+
+.navMenu ul li:hover {
+    display: inline-block;
+    background: #162d3c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown-menu > li > a{
+    padding:0;
+    line-height: 1.5;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navMenu ul li ul li {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.dropdown-menu li:hover {
+    width: 100%;
+}
+
+
+.dropdown.open{
+    background: #162d3c;
+}
+
+.dropdown-menu{
+    margin: 0;
+}
+
+.navMenu ul li a{
+    text-decoration:none;
+}
+
+.home__baner__link {
+    left: 145px!important;
+}

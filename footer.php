@@ -14,7 +14,7 @@
 					</div>
 				</div>
 				<div class="footer__dev">
-					<p>Разработка и поддержка сайта - Турбосайт</p>
+					<p>Разработка и поддержка сайта - <a style = "color:#fff;" href = "#" target="_blank">Турбосайт</a></p>
 				</div>
 			</div>
 		</footer>

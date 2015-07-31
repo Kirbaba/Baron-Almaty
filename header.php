@@ -13,15 +13,6 @@
 
     <?php wp_head(); ?>
 
-  <!--  <script>
-        function jivo_onLoadCallback() {
-            if (jivo_config.chat_mode == "online") {
-                var status = 1;
-            } else {
-                var status = 0;
-            }
-        }
-    </script>-->
 </head>
 
 <body>
@@ -52,7 +43,6 @@
 						</div> -->
                         <?php
                             $status = get_option( 'status_kons' );
-
                         if ($status == '1'){ ?>
                             <div class="header__content__menuline__online">
                                 <a id="jivo" data-toggle="modal" href="javascript:jivo_api.open();"><span>Online консультант</span></a>
@@ -71,7 +61,15 @@
 					</div>
 					<nav class="navMenu">							
 							<ul>
-								<li><a href="<?php echo '/about-company'; ?>">О компании</a></li>
+								<li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#<?php //echo '/about-company'; ?>">О компании</a>
+
+                                    <ul class="dropdown-menu">
+                                        <li><a href = "#">Меню номер раз</a></li>
+                                        <li><a href="#"> Меню один</a></li>
+                                        <li><a href = "#">меню</a></li>
+                                    </ul>
+                                </li>
 								<li><a href="<?php echo get_category_link(2);?>">Покупателям</a></li>
 								<li><a href="<?php echo get_category_link(3); ?>">Рецепты</a></li>
 								<li><a href="#nowhere">Партнерам</a></li>

@@ -316,7 +316,7 @@ function query_post_type($query)
 function get_cat()
 {
     $parser = new Parser_baron();
-    $kat = 8;
+    $kat = 2;
     $dochernii_kategorii = get_categories('child_of=' . $kat . '&hide_empty=0');
     foreach ($dochernii_kategorii as $cat) :
         $category_link = get_category_link( $cat->term_id );
@@ -381,4 +381,13 @@ function my_extra_fields_update( $post_id ){
     return $post_id;
 }
 
+
+/*function custom_content_after_post($content){
+    if (is_single()) {
+        //$content .= '<h2>Понравился рецепт? Расскажи друзьям</h2>';
+    }
+    return $content;
+}
+
+add_filter( "the_content", "custom_content_after_post" );*/
 

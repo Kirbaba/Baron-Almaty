@@ -5,7 +5,6 @@
         } else {
             var status = 0;
         }
-
         jQuery.ajax({
             url: myajax.url, //url, к которому обращаемся
             type: "POST",
