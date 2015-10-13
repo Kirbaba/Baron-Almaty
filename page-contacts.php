@@ -16,7 +16,13 @@
     </div>
     <div class="contain">
 		<section class="contacts">
-			<div class="contacts__text">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+                <?php the_content(); ?>
+
+            <?php endwhile; ?>
+            <?php endif; ?>
+			<!--<div class="contacts__text">
 				<h2>Контакты</h2>
 				<h4>Адрес:</h4>
 				<p>
@@ -36,7 +42,7 @@
 
 				<h4>Skype:</h4>
 				<p>ecokrov</p>
-			</div>
+			</div>-->
 
 			<div class="contacts__map">
 				<div id="map_canvas"></div>

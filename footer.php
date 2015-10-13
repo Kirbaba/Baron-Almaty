@@ -19,9 +19,8 @@
 			</div>
 		</footer>
 	</div>
-
-    <div class="modal fade" id="callme" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	    <div class="modal-dialog">
+    <div class="modal fade" id="callme" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	    <div class="modal-dialog" id = "mod1">
 	        <div class="modal-header">
 	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
 	            <form method="POST" id="formx" action="javascript:void(null);" onsubmit="call()">
@@ -30,13 +29,12 @@
 	            	<textarea class="formPopupText" name="mes" id = "text" placeholder="Введите ваше сообщение" required></textarea>
 	            	<input class="formPopupSub" type="button" id="button" href="#thnx" value="Отправить сообщение" style="cursor: pointer">
 	            </form>
-	            
 	        </div>
 	    </div>
 	</div>
 
     <div class="modal fade" id="thnx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog" id = "mod2">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
             <h1>Спасибо!</h1>

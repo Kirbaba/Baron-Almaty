@@ -30,7 +30,7 @@ add_action('wp_ajax_get_mail', 'get_mail_function');
 add_action('wp_ajax_nopriv_get_mail', 'get_mail_function');
 
 add_action('wp_ajax_set_status', 'set_status_function');
-add_action('wp_ajax_nopriv_set_status', 'set_status_function');
+add_action('wp_ajax_nopriv_get_status', 'set_status_function');
 
 
 define('ADD_BARON_DIR', plugin_dir_path(__FILE__));
@@ -57,7 +57,7 @@ function set_status_function(){
     $option_name = 'status_kons' ;
     $newvalue = $_POST['status'] ;
     $autoload = 'no';
-    prn('123');
+    prn($_POST['status']);
     if ( get_option( $option_name ) != $newvalue ) {
         update_option( $option_name, $newvalue,$autoload );
     } else {
@@ -271,7 +271,7 @@ function __crumbs_tax($term_id, $tax, $sep, $linkpatt)
     return implode('', $termlinks);
 }
 
-/*add_action('init', 'create_post_type');
+add_action('init', 'create_post_type');
 function create_post_type()
 {
     register_post_type('recipes',
@@ -298,7 +298,7 @@ function create_post_type()
             ),
             'taxonomies' => array('category', 'post_tag') //добавляем к записям необходимый набор таксономий
         ));
-}*/
+}
 
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query)

@@ -49,6 +49,20 @@ $post_id = get_the_ID();
             <div class="recipes__text">
                 <article>
                     <?php the_content();?>
+
+
+                    <script type="text/javascript">(function() {
+                            if (window.pluso)if (typeof window.pluso.start == "function") return;
+                            if (window.ifpluso==undefined) { window.ifpluso = 1;
+                                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                                s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+                                var h=d[g]('body')[0];
+                                h.appendChild(s);
+                            }})();</script>
+                    <h2>Понравился рецепт? Расскажи друзьям</h2>
+                    <div class="pluso" data-background="#ebebeb" data-options="big,round,line,horizontal,nocounter,theme=01" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
+
                     <!--<h2>Понравился рецепт? Расскажи друзьям</h2>
 
                     --><?php /*do_shortcode('[socialshare facebook = "1" twiter = "1" linkedin = "1" googlepluseone="0" pinterest = "1" fixed = "0" titleshare=""]');*/?>

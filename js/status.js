@@ -1,4 +1,3 @@
-
     function jivo_onLoadCallback() {
         if (jivo_config.chat_mode == "online") {
             var status = 1;

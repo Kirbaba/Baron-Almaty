@@ -6,8 +6,17 @@ jQuery(document).on('click', '#button', function (){
     if(name == "" || mail == "" || text == ""){
 
         alert ("Заполните все поля");
+
     }
-    else{
+    else
+    if(mail.indexOf("@") == '-1')
+    {
+        alert('Вы не ввели email');
+    }
+    else
+    {
+
+
             jQuery.ajax({
                 url: myajax.url, //url, к которому обращаемся
                 type: "POST",
@@ -23,6 +32,9 @@ jQuery(document).on('click', '#button', function (){
         /*document.getElementById('thnx' ).style.display = 'block';
         document.getElementById('callme' ).style.display = 'none';*/
         $('#callme').modal('hide');
+        client_h=document.body.clientHeight;
+        var otstup = (client_h-238)/2;
+        $("#mod2").css({'margin-top':otstup});
         $('#thnx').modal('show');
 
     }

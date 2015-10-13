@@ -8,7 +8,7 @@
 }
 
 
-#jivo-label {display:none; !important}
+#jivo-label {display:none!important;}
 
 .dropdown-menu{
     background: #1b3546;
@@ -63,5 +63,17 @@ ul.dropdown-menu li:hover {
 }
 
 .home__baner__link {
-    left: 145px!important;
+    left: 155px!important;
 }
+
+.navMenu{
+    margin-left: 15px;
+}
+
+
+.recipes__text h2{
+    font-size: 23px;
+    color: #23455b;
+}
+
+

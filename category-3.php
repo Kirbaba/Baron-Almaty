@@ -30,7 +30,25 @@
                         <a href="#nowhere" class="soc__repost__tw">75</a>-->
 
                         <a href="<?php the_permalink() ?>" class="toRecipe">Перейти к рецепту</a>
-
+                        <div class="recipes__block__content__info">
+                            <p>
+                                <i class="recipesTime"></i>
+                                <small>Время приготовления:</small>
+                                <?php
+                                $time = get_post_custom_values( 'time', $post_id );
+                                echo $time[0];
+                                ?>
+                            </p>
+                            <p>
+                                <i class="recipesPers"></i>
+                                <small>Рецепт на:</small>
+                                <?php
+                                $kol = get_post_custom_values( 'kol', $post_id );
+                                echo $kol[0];
+                                ?>
+                                человек
+                            </p>
+                        </div>
                        
                     </div>
                         
