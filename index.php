@@ -2,10 +2,11 @@
 		<div class="content">
 			<div class="home">								
 				<div class="fotorama" data-arrows="false" data-height="845/465" data-autoplay="true" data-loop="true">											
-					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">						
-					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">						
-					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">						
-					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">				
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+					<img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt="placeholder+image">
+					<?php echo do_shortcode('[index_channel]') ?>
 				</div>
 				<div class="home__baner">					
 					<div class="home__baner__link">

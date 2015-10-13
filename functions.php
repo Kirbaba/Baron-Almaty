@@ -8,8 +8,6 @@ function add_style()
     wp_enqueue_style('my-sass', get_template_directory_uri() . '/sass/style.css', array('my-bootstrap-extension'), '1');
 }
 
-
-
 function add_script(){
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '1');
     wp_enqueue_script( 'jq', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), '1');
@@ -26,19 +24,32 @@ function add_script(){
     wp_enqueue_script( 'status', get_template_directory_uri() . '/js/status.js', array(), '1');
 }
 
+function add_admin_script(){
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '1');
+    wp_enqueue_script('admin',get_template_directory_uri() . '/js/admin.js', array(), '1');
+    wp_enqueue_style( 'my-bootstrap-extension-admin', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
+    wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.js', array(), '1');
+    wp_enqueue_style( 'my-style-admin', get_template_directory_uri() . '/css/admin.css', array(), '1');
+}
+
+add_action('admin_enqueue_scripts', 'add_admin_script');
+
 add_action('wp_ajax_get_mail', 'get_mail_function');
 add_action('wp_ajax_nopriv_get_mail', 'get_mail_function');
 
 add_action('wp_ajax_set_status', 'set_status_function');
 add_action('wp_ajax_nopriv_set_status', 'set_status_function');
 
+add_action('wp_ajax_save_channel', 'save_channel');
+add_action('wp_ajax_update_channel', 'update_channel');
+add_action('wp_ajax_delete_channel', 'delete_channel');
 
 define('ADD_BARON_DIR', plugin_dir_path(__FILE__));
 define('ADD_BARON_URL', plugin_dir_url(__FILE__));
 
 require_once(ADD_BARON_DIR . "/lib/parser_baron.php");
 require_once(ADD_BARON_DIR . "/lib/Baron.php");
-
+require_once ADD_BARON_DIR . '/lib/Parser.php';
 
 add_action('wp_enqueue_scripts', 'add_style');
 add_action('wp_enqueue_scripts', 'add_script');
@@ -404,3 +415,81 @@ function change_submenu_class($menu) {
 }
 add_filter('wp_nav_menu','change_submenu_class');
 
+function admin_menu()
+{
+    add_menu_page('Настройка слайдера', 'Слайдер', 'manage_options', 'channels', 'channels');
+}
+
+add_action('admin_menu', 'admin_menu');
+
+//админка наших партнеров
+function channels()
+{
+    if (function_exists('wp_enqueue_media')) {
+        wp_enqueue_media();
+    } else {
+        wp_enqueue_style('thickbox');
+        wp_enqueue_script('media-upload');
+        wp_enqueue_script('thickbox');
+    }
+
+    $parser = new Parser();
+    $parser->render(ADD_BARON_DIR . "/view/channels.php", array(), true);
+}
+
+function channelsgrid_sc()
+{
+    $channels = getDataFromDb('channels');
+    $parser = new Parser();
+    $parser->render(ADD_BARON_DIR . "/view/channelsgrid.php", array('channels' => $channels), true);
+}
+add_shortcode('channelsgrid','channelsgrid_sc');
+
+//сохранение нового канала
+function save_channel()
+{
+    global $wpdb;
+
+    if (!empty($_POST['img'])) {
+        $wpdb->insert('channels', array('img' => $_POST['img']));
+    }
+    die();
+}
+
+//обновление канала
+function update_channel()
+{
+    global $wpdb;
+    //prn($_POST);
+    if (!empty($_POST['img'])) {
+        $wpdb->update('channels', array('img' => $_POST['img']), array('id' => $_POST['num']));
+    }
+    die();
+}
+
+//Удаление канала
+function delete_channel()
+{
+    global $wpdb;
+    //prn($_POST);
+    $wpdb->delete('channels', array('id' => $_POST['num']));
+    die();
+}
+
+//получение всех изображений по названию таблицы
+function getDataFromDb($tableName)
+{
+    global $wpdb;
+
+    $data = $wpdb->get_results("SELECT * FROM `$tableName`", ARRAY_A);
+    // prn($data);
+    return $data;
+}
+
+//вывод каналов на страницу
+function index_channel_sc(){
+    $channels = getDataFromDb('channels');
+    $parser = new Parser();
+    $parser->render(ADD_BARON_DIR . "/view/indexchannels.php", array('channels' => $channels), true);
+}
+add_shortcode('index_channel','index_channel_sc');
