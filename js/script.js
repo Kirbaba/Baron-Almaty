@@ -27,11 +27,14 @@ function loadScript() {
 window.onload = loadScript;
 
 $(document).ready(function() {
-    if($('.menu > li > a').attr('href') == '#'){
-        $('.menu > li').addClass('dropdown');
-        $('.menu > li > a').addClass('dropdown-toggle');
-        $('.menu > li > a').attr('data-toggle', 'dropdown');
-    }
+
+    $(".menu > li").each(function() {
+        if($(this).children('a').attr('href') == '#'){
+            $(this).addClass('dropdown');
+            $(this).children('a').addClass('dropdown-toggle');
+            $(this).children('a').attr('data-toggle', 'dropdown');
+        }
+    });
 
 });
 

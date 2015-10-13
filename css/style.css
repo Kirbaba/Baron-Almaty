@@ -41,6 +41,7 @@
 }
 
 .navMenu ul li ul li {
+    display: block;
     padding: 0px;
     margin: 0px;
 }
