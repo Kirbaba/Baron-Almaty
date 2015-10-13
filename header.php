@@ -59,23 +59,42 @@
 							<a data-toggle="modal" href="#callme"><span><i></i>Написать нам</span></a>
 						</div>						
 					</div>
-					<nav class="navMenu">							
-							<ul>
-								<li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#<?php //echo '/about-company'; ?>">О компании</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href = "#">Меню номер раз</a></li>
-                                        <li><a href="#"> Меню один</a></li>
-                                        <li><a href = "#">меню</a></li>
-                                    </ul>
-                                </li>
-								<li><a href="<?php echo get_category_link(2);?>">Покупателям</a></li>
-								<li><a href="<?php echo get_category_link(3); ?>">Рецепты</a></li>
-								<li><a href="#nowhere">Партнерам</a></li>
-								<li><a href="<?php echo get_permalink(27); ?>">Контакты</a></li>
-							</ul>
-						</nav>	
+					<?php
+						wp_nav_menu( array(
+							'theme_location'  => 'Header',
+							'menu'            => 'Main Menu',
+							'container'       => 'nav',
+							'container_class' => 'navMenu',
+							'container_id'    => '',
+							'menu_class'      => 'menu',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'depth'           => 0
+						) );
+					?>
+<!--					<nav class="navMenu">							-->
+<!--							<ul>-->
+<!--								<li class="dropdown">-->
+<!--                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#--><?php ////echo '/about-company'; ?><!--">О компании</a>-->
+<!---->
+<!--                                    <ul class="dropdown-menu">-->
+<!--                                        <li><a href = "#">Меню номер раз</a></li>-->
+<!--                                        <li><a href="#"> Меню один</a></li>-->
+<!--                                        <li><a href = "#">меню</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--								<li><a href="--><?php //echo get_category_link(2);?><!--">Покупателям</a></li>-->
+<!--								<li><a href="--><?php //echo get_category_link(3); ?><!--">Рецепты</a></li>-->
+<!--								<li><a href="#nowhere">Партнерам</a></li>-->
+<!--								<li><a href="--><?php //echo get_permalink(27); ?><!--">Контакты</a></li>-->
+<!--							</ul>-->
+<!--						</nav>	-->
 				</div>
 			</div>
 		</header>

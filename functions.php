@@ -392,3 +392,15 @@ function my_extra_fields_update( $post_id ){
 
 add_filter( "the_content", "custom_content_after_post" );*/
 
+
+function theme_register_nav_menu() {
+    register_nav_menu( 'Header', 'Main Menu' );
+}
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
+
+function change_submenu_class($menu) {
+    $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$menu);
+    return $menu;
+}
+add_filter('wp_nav_menu','change_submenu_class');
+

@@ -26,7 +26,14 @@ function loadScript() {
 
 window.onload = loadScript;
 
+$(document).ready(function() {
+    if($('.menu > li > a').attr('href') == '#'){
+        $('.menu > li').addClass('dropdown');
+        $('.menu > li > a').addClass('dropdown-toggle');
+        $('.menu > li > a').attr('data-toggle', 'dropdown');
+    }
 
+});
 
 $(function() {
 
