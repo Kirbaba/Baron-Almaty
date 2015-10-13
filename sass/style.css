@@ -165,7 +165,7 @@ ul {
 
 .fotorama__nav--dots {
   position: absolute;
-  bottom: 0; }
+  bottom: 15px; }
 
 .fotorama__dot {
   width: 10px;
